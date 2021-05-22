@@ -6,7 +6,7 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose the operation::\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Search Person via City.\n6.Exit Adress Book Application.\n=================================");
+            Console.WriteLine("=================================\nPress 1 to Create AddressBook and add Contact. \nPress 2 to Exit Adress Book Application.\n=================================");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBookMain();
 
@@ -29,17 +29,18 @@ namespace AddressBook
                     case "5":
                         addressBook.DuplicateChecker();
                         break;
-                    case "7":
+                    case "6":
                         addressBook.SearchPerson();
                         break;
-                    case "6":
-                        return;
+                    case "7":
+                        addressBook.FindCityState();
+                        break;
                     default:
-                        Console.WriteLine("Choose valid operation.");
+                        Console.WriteLine("=====\n!!Choose valid operation!!\n=====");
                         break;
 
                 }
-                Console.WriteLine("Choose the operation::\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Search Person via City.\n6.Exit Adress Book Application.\n=================================");
+                Console.WriteLine("=====\nChoose the operation::\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Search Person via City.\n6.Exit Adress Book Application.\n=====");
                 userInput = Console.ReadLine();
             }
         }
