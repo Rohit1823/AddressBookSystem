@@ -15,37 +15,16 @@ namespace AddressBook
                 switch (userInput)
                 {
                     case "1":
-                        Console.WriteLine("First Name:");
-                        string firstname = Console.ReadLine();
-                        Console.WriteLine("Last Name:");
-                        string lastname = Console.ReadLine();
-                        Console.WriteLine("Address:");
-                        string address = Console.ReadLine();
-                        Console.WriteLine("City:");
-                        string city = Console.ReadLine();
-                        Console.WriteLine("State:");
-                        string state = Console.ReadLine();
-                        Console.WriteLine("Zip Code:");
-                        string zipcode = Console.ReadLine();
-                        Console.WriteLine("Phone Number:");
-                        string phonenumber = Console.ReadLine();
-                        Console.WriteLine("Email:");
-                        string email = Console.ReadLine();
-                        var newContact = new Contact(firstname, lastname, address, city, state, zipcode, phonenumber, email);
-                        addressBook.AddContact(newContact);
+                        addressBook.StoreContact();
                         break;
                     case "2":
                         addressBook.DisplayAllContact();
                         break;
                     case "3":
-                        Console.WriteLine("Enter First Name of the Contact you want to edit:");
-                        string personName = Console.ReadLine();
-                        addressBook.EditContact(personName);
+                        addressBook.EditContact();
                         break;
                     case "4":
-                        Console.WriteLine("Enter First Name of the Contact you want to Delete:");
-                        string name = Console.ReadLine();
-                        addressBook.DeleteContact(name);
+                        addressBook.DeleteContact();
                         break;
                     case "5":
                         return;
