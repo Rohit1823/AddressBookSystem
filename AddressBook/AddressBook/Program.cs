@@ -6,7 +6,7 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contact.\n3.Exit Adress Book Application.\n=================================");
+            Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contact.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBookMain();
 
@@ -43,13 +43,18 @@ namespace AddressBook
                         addressBook.EditContact(personName);
                         break;
                     case "4":
+                        Console.WriteLine("Enter First Name of the Contact you want to Delete:");
+                        string name = Console.ReadLine();
+                        addressBook.DeleteContact(name);
+                        break;
+                    case "5":
                         return;
                     default:
                         Console.WriteLine("Choose valid operation.");
                         break;
 
                 }
-                Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contact.\n3.Edit Existing Contact.\n4Exit Adress Book Application.\n=================================");
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contact.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
                 userInput = Console.ReadLine();
             }
         }
