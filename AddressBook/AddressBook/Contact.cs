@@ -6,7 +6,7 @@ namespace AddressBook
 {
     class Contact
     {
-        //Add New Contacts
+        //Contacts
         public Contact(string firstname, string lastname, string address, string city, string state, string zipcode, string phonenumber, string email)
         {
             FirstName = firstname;
