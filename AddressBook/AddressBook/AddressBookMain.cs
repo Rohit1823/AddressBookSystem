@@ -150,10 +150,7 @@ namespace AddressBook
                 {
                     Console.WriteLine("Contact(s) is found in " + city + ": " + element.Value.FirstName);
                 }
-                else if (element.Value.State.Equals(city))
-                {
-                    Console.WriteLine("Contact(s) is found in " + city + ": " + element.Value.FirstName);
-                }
+                
                 else
                 {
                     Console.WriteLine("No such City or State stored in your addressbook.\nAvailable city and states are ::\n Cites:: " + element.Value.City + "\nStates:: " + element.Value.State);
@@ -175,6 +172,25 @@ namespace AddressBook
                     Console.WriteLine("No such Person found in Addressbook.\n\nAvailable person in your addressbook are :: " + element.Value.FirstName + "\n");
                 }
             }
+        }
+        public void FindNumOfPerson()
+        {
+            Console.WriteLine("Enter City or State ::");
+            string cityState = Console.ReadLine();
+            int countPerson = 0;
+            foreach (var element in DictName)
+            {
+                if (element.Value.City.Equals(cityState))
+                {
+                    countPerson++;
+                }
+                if (element.Value.State.Equals(cityState))
+                {
+                    countPerson++;
+                }
+
+            }
+            Console.WriteLine("\nNumber of Person found in " + cityState + " are " + countPerson);
         }
     }
 }
