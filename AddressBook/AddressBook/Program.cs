@@ -6,7 +6,7 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contact.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
+            Console.WriteLine("Choose the operation::\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Search Person via City.\n6.Exit Adress Book Application.\n=================================");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBookMain();
 
@@ -29,6 +29,9 @@ namespace AddressBook
                     case "5":
                         addressBook.DuplicateChecker();
                         break;
+                    case "7":
+                        addressBook.SearchPerson();
+                        break;
                     case "6":
                         return;
                     default:
@@ -36,7 +39,7 @@ namespace AddressBook
                         break;
 
                 }
-                Console.WriteLine("Choose the operation::\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Add Another Contact.\n6.Exit Adress Book Application.\n=================================");
+                Console.WriteLine("Choose the operation::\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Search Person via City.\n6.Exit Adress Book Application.\n=================================");
                 userInput = Console.ReadLine();
             }
         }
