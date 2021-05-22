@@ -6,6 +6,7 @@ namespace AddressBook
 {
     class AddressBookMain
     {
+        //Contact add
         
         private List<Contact> List { get; set; } = new List<Contact>();
         public void AddContact(Contact contact)
